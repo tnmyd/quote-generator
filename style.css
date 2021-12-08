@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;700&display=swap");
 *,
 *::before,
 *::after {
@@ -16,6 +17,7 @@ body {
 	/* Center the main element vertically and horizontally */
 	display: grid;
 	place-items: center;
+	font-family: "Readex Pro", sans-serif;
 }
 body {
 	line-height: 1.5;

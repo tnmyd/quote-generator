@@ -13,6 +13,7 @@ html,
 body {
     height: 100%;
     width: 100%;
+    /* Center the main element vertically and horizontally */
     display: grid;
     place-items: center;
 }
@@ -28,6 +29,7 @@ main {
     background-color: antiquewhite;
     border-radius: var(--border-radius);
     min-width: 200px;
+    max-width: 1000px;
 }
 .button-container-1 {
     display: flex;
@@ -47,6 +49,7 @@ img {
     min-width: 30px;
 }
 .copy-clipboard {
+    /* Shift button to the right */
     margin-left: auto;
     margin-right: 30px;
 }
@@ -56,7 +59,13 @@ button:not(.twitter) {
     border-radius: calc(var(--border-radius) - 5px);
     padding: 10px;
 }
-
+blockquote p {
+    font-size: 1.5rem;
+}
+.author {
+    font-size: 1.5rem;
+    text-align: right;
+}
 @media (max-width: 400px) {
     .button-container-1,
     .button-container-2 {

@@ -60,6 +60,10 @@ button:not(.twitter) {
 	color: #dfdbef;
 	border-radius: calc(var(--border-radius) - 5px);
 	padding: 10px;
+	font-weight: 700;
+}
+button:hover {
+	cursor: pointer;
 }
 blockquote p {
 	font-size: 1.5rem;

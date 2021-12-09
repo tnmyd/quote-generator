@@ -19,7 +19,8 @@ async function getQuotes() {
 function showQuote() {
 	let randomIndex = Math.floor(Math.random() * apiQuotes.length)
 	quoteElement.innerText = apiQuotes[randomIndex].text
-	authorElement.innerText = "—" + apiQuotes[randomIndex].author
+	const author = apiQuotes[randomIndex].author || "Anonymous"
+	authorElement.innerText = "—" + author
 	copyButton.innerText = "Copy to Clipboard"
 	copyButton.disabled = false
 }

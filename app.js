@@ -8,6 +8,8 @@ const quoteContainer = document.querySelector("main")
 
 //Get quotes from API if it is not present in local storage
 let apiQuotes = JSON.parse(localStorage.getItem("quotes")) || null
+// If apiQuotes is not in local storage, get it. Otherwise display from local
+// storage.
 if (apiQuotes == null) {
 	getQuotes()
 } else {
@@ -45,10 +47,9 @@ function tweet() {
 	const twitterUrl = `https://twitter.com/intent/tweet?text=${quoteElement.textContent} ${authorElement.textContent}`
 	window.open(twitterUrl, "_blank")
 }
-window.addEventListener("load", showQuote)
+
 newQuoteButton.addEventListener("click", showQuote)
 tweetButton.addEventListener("click", tweet)
-
 copyButton.addEventListener("click", async () => {
 	let text = quoteElement.innerText + authorElement.innerText
 	await navigator.clipboard.writeText(text)

@@ -48,11 +48,13 @@ function tweet() {
 	window.open(twitterUrl, "_blank")
 }
 
-newQuoteButton.addEventListener("click", showQuote)
-tweetButton.addEventListener("click", tweet)
-copyButton.addEventListener("click", async () => {
+async function copyToClipboard() {
 	let text = quoteElement.innerText + authorElement.innerText
 	await navigator.clipboard.writeText(text)
 	copyButton.innerText = "Copied"
 	copyButton.disabled = true
-})
+}
+
+newQuoteButton.addEventListener("click", showQuote)
+tweetButton.addEventListener("click", tweet)
+copyButton.addEventListener("click", copyToClipboard)

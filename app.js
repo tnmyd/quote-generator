@@ -2,6 +2,7 @@ const quoteElement = document.querySelector(".quote")
 const authorElement = document.querySelector(".author")
 const newQuoteButton = document.querySelector(".new-quote")
 const copyButton = document.querySelector(".copy-clipboard")
+const tweetButton = document.querySelector(".twitter")
 
 //Get quotes from API if it is not present in local storage
 let apiQuotes = JSON.parse(localStorage.getItem("quotes")) || null
@@ -24,8 +25,14 @@ function showQuote() {
 	copyButton.innerText = "Copy to Clipboard"
 	copyButton.disabled = false
 }
+
+function tweet() {
+	const twitterUrl = `https://twitter.com/intent/tweet?text=${quoteElement.textContent} ${authorElement.textContent}`
+	window.open(twitterUrl, "_blank")
+}
 window.addEventListener("load", showQuote)
 newQuoteButton.addEventListener("click", showQuote)
+tweetButton.addEventListener("click", tweet)
 
 copyButton.addEventListener("click", async () => {
 	let text = quoteElement.innerText + authorElement.innerText

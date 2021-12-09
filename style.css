@@ -96,6 +96,10 @@ blockquote p {
 @media (max-width: 400px) {
 	.button-container {
 		flex-direction: column;
+		justify-content: center;
+	}
+	.copy-clipboard {
+		margin-inline: auto;
 	}
 	button,
 	.twitter {

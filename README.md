@@ -7,5 +7,3 @@ An app that generates random quotes.
 -   HTML
 -   CSS
 -   Javascript
-
-Note:
